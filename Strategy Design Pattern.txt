@@ -1,0 +1,34 @@
+Strategy Design Pattern
+
+It is behavorial design pattern which helps to select algorithm at runtime. 
+
+Instead of Hardcoding one algorithm, code receives run time instruction to select from family of algorithm.
+
+It is basically using composition instead of inheritance.
+
+Decouple the algorithm from the one using the algorithm thus client does not have to wary if the algorithm varies.
+
+Example : Sorting algorithm in list.
+
+it is used where inheritance cannot be used like sharing behavior between 2 or more childs
+
+Think about UML diagram of strategy design pattern.
+
+So when using strategy design pattern , child is converted into client and this client use different behavior which can be varied.
+
+Example :-
+
+class list{
+	private SortingStrategy sortingStrategy;
+	
+	list(SortingStrategy sortingStrategy)
+	{
+		this.sortingStrategy=sortingStrategy;
+	}
+	
+	public sort()
+	{
+		this.sortingStrategy.sort();
+	}
+}
+
